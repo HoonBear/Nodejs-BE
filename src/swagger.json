@@ -1,0 +1,115 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My API"
+    },
+    "tags": [
+        {
+            "name": "User",
+            "description": "API for User"
+        },
+        {
+            "name": "Admin",
+            "description": "admin management"
+        }
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/user/admin-login": {
+            "post": {
+                "tags": [
+                    "Admin"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ndDN",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "$ref": "#/definitions/200"
+                    },
+                    "404": {
+                        "description": "Failed. unit not found."
+                    }
+                }
+            }
+        },
+        "/api/user/login": {
+            "post": {
+                "tags": [
+                    "User"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "ndDN",
+                        "in": "body",
+                        "required": false,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "email": {
+                                    "required": false,
+                                    "type": "string"
+                                },
+                                "facebookID": {
+                                    "type": "string"
+                                },
+                                "facebookEmail": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "produces": [],
+                "responses": {
+                    "200": {
+                        "$ref": "#/definitions/200"
+                    },
+                    "404": {
+                        "description": "Failed. unit not found."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "200": {
+            "description": "Success"
+        },
+        "auth": {
+            "name": "Auth-key",
+            "in": "header",
+            "description": "access token",
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name": "BECyberEnglish",
+            "script": "./index.js",
+            "exec_mode": "fork",
+            "instances": 1,
+            "env": {
+                "NODE_ENV": "production",
+                "MYSQL_DATABASE": "---",
+                "MYSQL_HOST": "61.14.233.134",
+                "MYSQL_USER": "---",
+                "MYSQL_PASSWORD": "---",
+                "MYSQL_PORT": 3306,
+                "MYSQL_CONNECTIONLIMIT": 10,
+                "SERVER_HOSTNAME": "--------------------",
+                "SERVER_PORT": 2000,
+                "SERVER_DOMAIN_ASSETS": "--------------------",
+                "URL_CHECK_LOGIN": "https://apicrm.cybersoft.edu.vn/api",
+                "ASSETS_PORT": 2001,
+                "LOG_DIR": "/home/centos/educative_cyber/logs/prod",
+                "LOG_LEVEL": "info"
+            }
+        }
+    ]
+}

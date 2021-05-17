@@ -1,0 +1,26 @@
+{
+    "apps": [
+        {
+            "name": "BEStagingCyberEducative",
+            "script": "./index.js",
+            "exec_mode": "fork",
+            "instances": 1,
+            "env": {
+                "NODE_ENV": "staging",
+                "MYSQL_DATABASE": "staging_educative",
+                "MYSQL_HOST": "61.14.233.134",
+                "MYSQL_USER": "cyberEducativeCyber",
+                "MYSQL_PASSWORD": "eduCat1veCiberStag1ng@123",
+                "MYSQL_PORT": 3306,
+                "MYSQL_CONNECTIONLIMIT": 10,
+                "SERVER_HOSTNAME": "https://be.cyber-educative.tk",
+                "SERVER_PORT": 2000,
+                "SERVER_DOMAIN_ASSETS": "https://be.cyber-educative.tk",
+                "URL_CHECK_LOGIN": "https://apicrm.cybersoft.edu.vn/api",
+                "ASSETS_PORT": 2001,
+                "LOG_DIR": "/home/centos/educative_cyber/logs/staging",
+                "LOG_LEVEL": "info"
+            }
+        }
+    ]
+}
